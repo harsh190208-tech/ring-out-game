@@ -179,3 +179,20 @@ button {
   background: #444b5e;
   box-shadow: none;
 }
+.credit {
+  margin-top: 28px;
+  font-size: 0.9rem;
+  color: #9aa4bf;
+  letter-spacing: 0.5px;
+}
+
+#game-credit {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  z-index: 10;
+}
