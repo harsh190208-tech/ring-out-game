@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Ring Out! 8-Player Arena</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- LOBBY / JOIN SCREEN -->
+  <div id="menu-screen" class="screen">
+    <h1>RING OUT!</h1>
+    <p class="subtitle">8-Player Arena Brawler</p>
+    <input id="name-input" type="text" placeholder="Your Name" maxlength="10" />
+    <button id="create-btn" class="primary-btn">Create New Room</button>
+    <div class="divider">OR</div>
+    <div class="join-row">
+      <input id="code-input" type="text" placeholder="ROOM CODE" maxlength="4" />
+      <button id="join-btn" class="secondary-btn">Join</button>
+    </div>
+    <p id="error-text" class="error"></p>
+  </div>
+
+  <!-- GAMEPLAY SCREEN -->
+  <div id="game-screen" class="screen hidden">
+    <div id="top-bar">
+      <span id="room-display">Room: ----</span>
+      <span id="status-display">Waiting...</span>
+    </div>
+
+    <canvas id="game-canvas"></canvas>
+
+    <!-- Host Start Button Overlay -->
+    <div id="lobby-overlay">
+      <div id="player-list"></div>
+      <button id="start-btn" class="primary-btn hidden">START GAME</button>
+      <p id="wait-msg">Waiting for host to start...</p>
+    </div>
+
+    <!-- Phone Touch Controls -->
+    <div id="joystick-zone">
+      <div id="joystick-base">
+        <div id="joystick-knob"></div>
+      </div>
+    </div>
+    <button id="dash-btn">DASH</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
