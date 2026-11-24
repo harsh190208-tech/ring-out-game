@@ -118,12 +118,17 @@ button {
 }
 
 #lobby-overlay {
-  position: absolute;
-  background: rgba(18, 21, 31, 0.9);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(18, 21, 31, 0.95);
+  border: 2px solid #4da6ff;
   padding: 24px;
   border-radius: 16px;
   text-align: center;
-  z-index: 20;
+  z-index: 50;
+  min-width: 240px;
 }
 
 #player-list {
@@ -187,12 +192,14 @@ button {
 }
 
 #game-credit {
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
   pointer-events: none;
-  z-index: 10;
+  z-index: 30;
 }
+
+
